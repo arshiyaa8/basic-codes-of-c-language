@@ -1,0 +1,81 @@
+//joining the strings and making a new one//
+
+#include <stdio.h>
+int main()
+{ int k=0;
+char str1[100],str2[100],str3[200];
+int i,j;
+printf("enter str1");
+gets(str1);
+printf("enter str2");
+gets(str2);
+for(i=0;str1[i]!='\0';i++)
+{str3[k]=str1[i];
+k++;}
+for(i=0;str2[i]!='\0';i++)
+{str3[k]=str2[i];
+k++;}
+str3[k]='/0';
+printf("addition is %s",str3);
+}
+
+
+//count the a/A in the no of names tell by the user//
+
+#include <stdio.h>
+int main()
+{ char name [100][100];
+int i,j,n,count;
+printf("enter no of names");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{printf("enter a name:");
+scanf("%s",name[i]);
+}
+for(i=0;i<n;i++)
+{  count=0;
+for(j=0;name[i][j]!='\0';j++)
+{if (name[i][j]=='a'||name[i][j]=='A')
+{count++;}}
+printf("number of a in %s=%d",name[i],count);
+}
+}
+
+//taking no of student and subject from user and printing roll no, highest marks of each student and in which subject//
+
+#include <stdio.h>
+int main()
+{int i,j,a,n,sub;
+    int m[100][100],max=0;
+printf("enter no of student");
+scanf("%d",&n);
+printf("enter no of subjects");
+scanf("%d",&a);
+for(i=0;i<n;i++)
+{printf("enter marks of subjects  %d  \n",i+1);
+
+for(j=0;j<a;j++)
+{
+scanf("%d",&m[i][j]);
+}
+}
+
+for(i=0;i<n;i++)
+{   max=0;
+    sub=1;
+    for(j=0;j<a;j++)
+{
+if (m[i][j]>max)
+    {max=m[i][j];
+     sub=j+1;}
+}
+
+printf(" highest marks - %d , subject - %d  , roll no - %d  \n ",max,sub,i+1);
+}
+return 0;
+}
+
+
+
+
+
