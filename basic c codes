@@ -1,4 +1,4 @@
-//joining the strings and making a new one//
+//joining the strings and making a new string//
 
 #include <stdio.h>
 int main()
