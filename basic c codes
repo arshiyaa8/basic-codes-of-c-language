@@ -75,7 +75,64 @@ printf(" highest marks - %d , subject - %d  , roll no - %d  \n ",max,sub,i+1);
 return 0;
 }
 
+\\percent of each student\\
 
+#include <stdio.h>
+
+int main() {
+    int i, j, sum;
+    float percent[5];
+    int marks[5][4];
+
+    for (i = 0; i < 5; i++) {
+        printf("\nEnter marks of student %d:\n", i + 1);
+        for (j = 0; j < 4; j++) {
+            printf("  Subject %d: ", j + 1);
+            scanf("%d", &marks[i][j]);
+        }
+    }
+
+    for (i = 0; i < 5; i++) {
+        sum = 0;
+        for (j = 0; j < 4; j++) {
+            sum = sum + marks[i][j];
+        }
+        percent[i] = sum / 4.0;
+        printf("Student %d percentage: %.2f%%\n", i + 1, percent[i]);
+    }
+
+    return 0;
+}
+
+
+\\display the total of marks and display the percent of each student from that total\\
+
+#include <stdio.h>
+
+int main() {
+int i,j,sum=0, marks[5][5];
+int percent;
+
+for(i=0;i<5;i++)
+{ printf(" enter the 5 no of marks of students",i+1);
+for(j=0;j<5;j++)
+{
+printf("subjects%d",j+1);
+scanf("%d",&marks[i][j]);
+}
+}
+
+for(i=0;i<5;i++)
+{ sum=0;
+for(j=0;j<5;j++)
+{ sum=sum+marks[i][j];
+}
+percent=sum/5;
+printf("student %d , total %d , percentage %d ",i+1,sum,percent);
+}
+}
+
+\\
 
 
 
