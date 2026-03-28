@@ -159,5 +159,63 @@ printf("students  %d max marks %d", i+1,max);
 }
 
 
+//result of avg of total marks of each student//
+
+#include <stdio.h>
+int main()
+{ int avg;
+int i,j,marks[5][5];
+int total=0,sum=0;
+
+for(i=0;i<5;i++)
+{          printf(" enter the 5 marks of students%d ",i+1);
+for(j=0;j<5;j++)
+{             scanf("%d",&marks[i][j]);
+              }
+}
+for (i=0;i<5;i++)
+ {
+        sum=0;
+for (j=0;j<5;j++)
+ {
+            sum=sum+marks[i][j];
+        }
+        total=total+sum;
+        avg=total/5;
+        }
+printf("total of all the students %d", total);
+printf("average of all the students %d", avg);
+
+        }
+
+
+//calculating the maximum marks of a student and min of  all//
+#include <stdio.h>
+
+int main()
+{
+int i,j,min=1000, marks[5][5],globalMin=1000;
+
+for(i=0;i<5;i++)
+{ printf(" enter the 5 marks of students%d ",i+1);
+for(j=0;j<5;j++)
+{ scanf("%d",&marks[i][j]);
+}
+}
+for(i=0;i<5;i++)
+{ min=1000;
+for(j=0;j<5;j++)
+{ if(marks[i][j]<min)
+{min=marks[i][j];
+}
+}
+printf("students  %d min marks %d", i+1,min);
+if (min < globalMin)
+            {globalMin = min;}
+}
+printf("gobal min marks %d", globalMin);
+}
+
+
 
 
